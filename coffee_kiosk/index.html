@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!-- HTML 문서 헤더 부분 -->
+<!-- 해당 페이지의 각종 설정 등을 여기서 선언할 수 있습니다. -->
+<!-- title: 브라우저 탭에 표시될 문서의 제목입니다. -->
+<!-- script, line 태그 등을 통해 스타일시트(css)나 스크립트(js) 등 파일을 불러올 수 있습니다. -->
+
+<head>
+    <title>커피 키오스크</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- J쿼리 문법을 사용하기 위해 해당 스크립트 로드 -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css"> <!-- index.css 파일 로드 -->
+    <script type="text/javascript" src="./js/index.js"></script> <!-- index.js 파일 로드 -->
+</head>
+
+<!-- HTML 문서 바디 부분 -->
+<!-- 일반적으로 브라우저에서 노출 되는 영역입니다. -->
+
+<body>
+    <!-- 키오스크 화면 최상단 네비게이션 바 -->
+    <div class="navigation">
+        <div class="container" onclick="moveTo('coffee')">커피</div>
+        <div class="container" onclick="moveTo('non-coffee')">논커피</div>
+        <div class="container" onclick="moveTo('beverage')">음료</div>
+        <div class="container" onclick="moveTo('food')">간식</div>
+    </div>
+    <!-- 아이템 선택 화면 
+        상단 네비게이션바와 연결하여 노출할 카테고리를 제어할 수 있다.
+        메뉴 미노출 -> style="display:none;" 
+        메뉴 노출 -> style="display:block;" 
+        -->
+    <div class="main">
+        <div class="items coffee">
+            <div class="item-container" onclick="getItem('아메리카노');">
+                <div class=" item-image">
+                    <img src="./img/americano.png" />
+                </div>
+                <div class="item-title">
+                    아메리카노
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('라떼');">
+                <div class=" item-image">
+                    <img src="./img/latte.png" />
+                </div>
+                <div class="item-title">
+                    라떼
+                </div>
+            </div>
+        </div>
+        <div class="items non-coffee" style="display:none;">
+            <div class="item-container" onclick="getItem('유자차');">
+                <div class="item-image">
+                    <img src="./img/citron-tea.png" />
+                </div>
+                <div class="item-title">
+                    유자차
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('얼그레이');">
+                <div class="item-image">
+                    <img src="./img/earl-grey.png" />
+                </div>
+                <div class="item-title">
+                    얼그레이
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('페퍼민트');">
+                <div class="item-image">
+                    <img src="./img/peppermint.png" />
+                </div>
+                <div class="item-title">
+                    페퍼민트
+                </div>
+            </div>
+        </div>
+        <div class="items beverage" style="display:none;">
+            <div class="item-container" onclick="getItem('아이스초코');">
+                <div class="item-image">
+                    <img src="./img/ice-chocolate.png" />
+                </div>
+                <div class="item-title">
+                    아이스초코
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('아이스티');">
+                <div class="item-image">
+                    <img src="./img/ice-tea.png" />
+                </div>
+                <div class="item-title">
+                    아이스티
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('레몬에이드');">
+                <div class="item-image">
+                    <img src="./img/lemonade.png" />
+                </div>
+                <div class="item-title">
+                    레몬에이드
+                </div>
+            </div>
+            <div class="item-container" onclick="getItem('오렌지주스');">
+                <div class="item-image">
+                    <img src="./img/orange-juice.png" />
+                </div>
+                <div class="item-title">
+                    오렌지주스
+                </div>
+            </div>
+        </div>
+        <div class="items food" style="display:none;">
+            <div class="item-container" onclick="getItem('티라미수');">
+                <div class="item-image">
+                    <img src="./img/tiramisu.png" />
+                </div>
+                <div class="item-title">
+                    티라미수
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 하단 주문하기 버튼 -->
+    <div class="sub-container">
+        <span>주문하기</span>
+        <hr id="bLine">
+
+        <div class="order-btn" onclick="order();">주문하기</div>
+    </div>
+</body>
