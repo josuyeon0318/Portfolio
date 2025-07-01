@@ -8,26 +8,18 @@
 <head>
     <title>커피 키오스크</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- J쿼리 문법을 사용하기 위해 해당 스크립트 로드 -->
-    <link rel="stylesheet" type="text/css" href="./css/index.css"> <!-- index.css 파일 로드 -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css"> <!-- index.css 파일 로드 -->
     <script type="text/javascript" src="./js/index.js"></script> <!-- index.js 파일 로드 -->
 </head>
 
-<!-- HTML 문서 바디 부분 -->
-<!-- 일반적으로 브라우저에서 노출 되는 영역입니다. -->
-
 <body>
-    <!-- 키오스크 화면 최상단 네비게이션 바 -->
     <div class="navigation">
         <div class="container" onclick="moveTo('coffee')">커피</div>
         <div class="container" onclick="moveTo('non-coffee')">논커피</div>
         <div class="container" onclick="moveTo('beverage')">음료</div>
         <div class="container" onclick="moveTo('food')">간식</div>
     </div>
-    <!-- 아이템 선택 화면 
-        상단 네비게이션바와 연결하여 노출할 카테고리를 제어할 수 있다.
-        메뉴 미노출 -> style="display:none;" 
-        메뉴 노출 -> style="display:block;" 
-        -->
+ 
     <div class="main">
         <div class="items coffee">
             <div class="item-container" onclick="getItem('아메리카노');">
@@ -118,9 +110,9 @@
             </div>
         </div>
     </div>
-    <!-- 하단 주문하기 버튼 -->
+    
     <div class="sub-container">
-        <span>주문하기</span>
+        <span>주문표</span>
         <hr id="bLine">
 
         <div class="order-btn" onclick="order();">주문하기</div>
