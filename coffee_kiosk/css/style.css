@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -98,4 +104,14 @@ body {
     .item-container {
         width: 100%;
     }
+}
+
+.total-price {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: right;
+  color: #333;
 }
